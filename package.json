@@ -1,0 +1,44 @@
+{
+  "name": "officiaarchitecto",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to generate TypeScript types from _your_ CSS class names",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanaBeier/officiaarchitecto.git"
+  },
+  "scripts": {
+    "jest": "jest",
+    "tsc": "tsc",
+    "build": "rm -rf dist && tsc --project tsconfig.build.json",
+    "watch": "tsc --project tsconfig.build.json --watch",
+    "test": "npm run tsc && npm run jest",
+    "release": "np --no-publish",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "keywords": [
+    "facilis",
+    "et"
+  ],
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "author": "MavisHagenes",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^12.12.5",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "sh-thunk": "^0.3.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "postcss": "^7.0.21",
+    "postcss-selector-parser": "^6.0.2"
+  }
+}
